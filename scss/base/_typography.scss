@@ -1,0 +1,52 @@
+// ─────────────────────────────────────────────────────────────
+// scss/base/_typography.scss
+// All heading and body text styles.
+// ─────────────────────────────────────────────────────────────
+
+body {
+  font-family: $font-body;
+  color: $color-body;
+  font-weight: 400;
+  font-size: clamp(16px, calc(16 / 1440 * 100vw), 16px);
+  line-height: clamp(24px, calc(24 / 1440 * 100vw), 24px);
+}
+
+main h1 {
+  font-family: $font-heading;
+  font-size: clamp(45px, 4.4vw, 84px);
+  line-height: clamp(42.8px, 4.2vw, 80px);
+  margin-bottom: clamp(32px, calc(36 / 1440 * 100vw), 36px);
+  color: $color-black;
+  text-transform: uppercase;
+}
+
+main h2 {
+  font-family: $font-heading;
+  font-size: clamp(40px, 2.5vw, 48px);
+  line-height: clamp(40px, 2.75vw, 52.8px);
+  margin-bottom: clamp(16px, calc(18 / 1440 * 100vw), 18px);
+  color: $color-black;
+}
+
+main h3 {
+  font-family: $font-heading;
+  font-size: clamp(26px, calc(30 / 1440 * 100vw), 30px);
+  line-height: clamp(28.6px, calc(33 / 1440 * 100vw), 33px);
+  margin-bottom: clamp(16px, calc(18 / 1440 * 100vw), 22px);
+  color: $color-black;
+}
+
+.p-large {
+  font-size: clamp(14px, calc(18 / 1440 * 100vw), 18px);
+  line-height: clamp(21px, calc(27 / 1440 * 100vw), 27px);
+  margin-bottom: clamp(16px, calc(18 / 1440 * 100vw), 18px);
+  color: $color-black;
+}
+
+.p-xlarge {
+  font-weight: 700;
+  font-size: clamp(19px, calc(22 / 1440 * 100vw), 19px);
+  line-height: clamp(26.6px, calc(30.8 / 1440 * 100vw), 30.8px);
+  margin-bottom: clamp(16px, calc(18 / 1440 * 100vw), 18px);
+  color: $color-black;
+}

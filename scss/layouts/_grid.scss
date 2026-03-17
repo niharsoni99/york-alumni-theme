@@ -1,0 +1,48 @@
+// ─────────────────────────────────────────────────────────────
+// scss/layouts/_grid.scss
+// Container and section layout helpers.
+// ─────────────────────────────────────────────────────────────
+
+.container {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 clamp(24px, calc(36 / 1440 * 100vw), 36px);
+}
+
+.york-custom-section {
+  @include section-pad;
+  width: 100%;
+}
+
+.york-cms-custom-section.york-custom-section {
+  margin-bottom: 0;
+}
+
+// Background variants
+.bg-grey  { background: $color-grey-bg; }
+.bg-green { background: $color-green; }
+.bg-blue  { background: $color-blue-dark; }
+
+.text_white * { color: $color-white; }
+
+// Two-column content + media
+.custom-content-with-media {
+  display: flex;
+  gap: 36px;
+  justify-content: space-between;
+
+  .custom-media,
+  .custom-content { width: 50%; }
+
+  .custom-media img {
+    width: 100%;
+    border-radius: clamp(16px, calc(18 / 1440 * 100vw), 18px);
+  }
+
+  @include respond-to('mobile') {
+    flex-wrap: wrap;
+    gap: 32px;
+    .custom-media,
+    .custom-content { width: 100%; }
+  }
+}

@@ -1,0 +1,50 @@
+// ─────────────────────────────────────────────────────────────
+// scss/components/_buttons.scss
+// All .cta button variants.
+// ─────────────────────────────────────────────────────────────
+
+.cta {
+  border-radius: clamp(100px, calc(100 / 1440 * 100vw), 100px);
+  border: 2.4px solid $color-black;
+  display: inline-block;
+  padding: clamp(12px, calc(16 / 1440 * 100vw), 16px) clamp(20px, calc(24 / 1440 * 100vw), 24px);
+  color: $color-black;
+  text-align: center;
+  font-size: clamp(16px, calc(18 / 1440 * 100vw), 18px);
+  font-weight: 700;
+  line-height: clamp(22px, calc(27 / 1440 * 100vw), 27px);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+  &.cta-blue {
+    color: $color-white;
+    border-color: $color-blue;
+    background: $color-blue;
+    &:hover { border-color: $color-blue-dark; background: $color-blue-dark; }
+  }
+
+  &.cta-yellow {
+    color: $color-black;
+    border-color: $color-yellow;
+    background: $color-yellow;
+    &:hover { border-color: $color-yellow-lt; background: $color-yellow-lt; }
+  }
+
+  &.cta-transparant {
+    color: $color-blue;
+    border-color: $color-blue;
+    background: transparent;
+    &:hover { color: $color-white; border-color: $color-blue-dark; background: $color-blue-dark; }
+  }
+
+  &.cta-yellow-transparant {
+    color: $color-yellow;
+    border-color: $color-yellow;
+    background: transparent;
+    span { color: $color-yellow; }
+    &:hover { color: $color-black; background: $color-yellow; span { color: $color-black; } }
+  }
+
+  &.full-width { width: 100%; }
+}

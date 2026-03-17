@@ -1,0 +1,36 @@
+// ─────────────────────────────────────────────────────────────
+// scss/_variables.scss
+// All design tokens in one place.
+// ─────────────────────────────────────────────────────────────
+
+// Colors
+$color-black:       #0B0C0C;
+$color-white:       #ffffff;
+$color-body:        #232B31;
+$color-blue:        #0C31AC;
+$color-blue-dark:   #001E82;
+$color-green:       #144835;
+$color-green-dark:  #1B5F46;
+$color-yellow:      #FFD200;
+$color-yellow-lt:   #FFE259;
+$color-grey-bg:     #EBE9E3;
+$color-border:      #8D9695;
+$color-cyan:        #00C2DE;
+$color-magenta:     #3C0032;
+$color-error:       #E20000;
+
+// Fonts
+$font-body:         "Graphik", sans-serif;
+$font-heading:      "York Grot", sans-serif;
+
+// Breakpoints
+$bp-mobile:         375px;
+$bp-tablet:         768px;
+$bp-desktop:        1440px;
+$bp-small:          767px;
+$bp-medium:         991px;
+
+// Spacing
+$section-py:        54px;
+$section-py-mobile: 48px;
+$container-max:     1545px;

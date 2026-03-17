@@ -1,0 +1,142 @@
+/* York Admin — Meta Box Styles */
+
+/* ── Tabs ── */
+.york-tabs-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 0;
+    border-bottom: 2px solid #2271b1;
+    padding: 0;
+    list-style: none;
+}
+.york-tabs-nav li { margin: 0; }
+.york-tabs-nav button {
+    background: #f0f0f1;
+    border: 1px solid #c3c4c7;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #3c434a;
+    transition: background .15s;
+}
+.york-tabs-nav button:hover { background: #dcdcde; }
+.york-tabs-nav button.is-active {
+    background: #fff;
+    color: #2271b1;
+    border-color: #2271b1;
+    border-bottom-color: #fff;
+    margin-bottom: -2px;
+}
+.york-tab-panel { display: none; padding: 20px 0 0; }
+.york-tab-panel.is-active { display: block; }
+
+/* ── Fields ── */
+.york-field { margin-bottom: 14px; }
+.york-field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: #50575e;
+}
+.york-field input[type="text"],
+.york-field input[type="url"],
+.york-field input[type="number"],
+.york-field textarea,
+.york-field select {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #8c8f94;
+    border-radius: 3px;
+    font-size: 13px;
+}
+.york-field textarea { height: 70px; resize: vertical; }
+.york-field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+/* ── Link field ── */
+.york-link-field {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    background: #f9f9f9;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    padding: 10px 12px;
+}
+.york-link-field span {
+    font-size: 11px;
+    font-weight: 600;
+    color: #50575e;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* ── Image picker ── */
+.york-image-field { display: flex; gap: 12px; align-items: flex-start; flex-wrap: wrap; }
+.york-image-preview {
+    width: 80px; height: 80px;
+    background: #f0f0f1;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.york-image-preview img { width: 100%; height: 100%; object-fit: cover; }
+.york-image-controls { display: flex; flex-direction: column; gap: 6px; }
+.york-remove-image { color: #b32d2e !important; font-size: 12px !important; }
+
+/* ── Repeater ── */
+.york-repeater { border: 1px solid #dcdcde; border-radius: 4px; overflow: hidden; }
+.york-repeater-item { background: #fff; border-bottom: 1px solid #dcdcde; }
+.york-repeater-item:last-child { border-bottom: none; }
+.york-repeater-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: #f6f7f7;
+    cursor: pointer;
+    user-select: none;
+}
+.york-repeater-header:hover { background: #f0f0f1; }
+.york-repeater-handle { color: #8c8f94; cursor: grab; font-size: 16px; }
+.york-repeater-label { font-weight: 600; font-size: 13px; flex: 1; }
+.york-repeater-toggle {
+    color: #8c8f94;
+    font-size: 18px;
+    transition: transform .2s;
+    line-height: 1;
+    margin-left: 4px;
+}
+.york-repeater-item.is-open .york-repeater-toggle { transform: rotate(180deg); }
+.york-repeater-body { display: none; padding: 14px; border-top: 1px solid #dcdcde; }
+.york-repeater-item.is-open .york-repeater-body { display: block; }
+.york-repeater-remove {
+    background: none; border: none;
+    color: #b32d2e; font-size: 12px;
+    cursor: pointer; padding: 0;
+}
+.york-repeater-remove:hover { text-decoration: underline; }
+.york-add-repeater-item {
+    width: 100%; padding: 10px;
+    background: #f6f7f7; border: none;
+    border-top: 1px solid #dcdcde;
+    cursor: pointer; font-size: 13px;
+    font-weight: 600; color: #2271b1;
+    text-align: left; transition: background .15s;
+}
+.york-add-repeater-item:hover { background: #e8f0fb; }

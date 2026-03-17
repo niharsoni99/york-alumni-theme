@@ -1,0 +1,52 @@
+// ─────────────────────────────────────────────────────────────
+// scss/layouts/_footer.scss
+// Site footer grid + columns.
+// ─────────────────────────────────────────────────────────────
+
+.site-footer {
+  background: $color-blue-dark;
+  color: $color-white;
+  padding: 48px 0 24px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: clamp(24px, calc(48 / 1440 * 100vw), 48px);
+  margin-bottom: 40px;
+
+  @include respond-to('tablet') { grid-template-columns: 1fr 1fr; }
+  @include respond-to('mobile') { grid-template-columns: 1fr; }
+}
+
+.footer-col h4 {
+  font-family: $font-heading;
+  color: $color-yellow;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-col ul li a {
+  color: rgba($color-white, 0.8);
+  font-size: 15px;
+  transition: color 0.2s;
+  &:hover { color: $color-yellow; }
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba($color-white, 0.15);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  p {
+    color: rgba($color-white, 0.5);
+    font-size: 14px;
+    margin: 0;
+  }
+}

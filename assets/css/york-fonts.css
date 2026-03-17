@@ -1,0 +1,29 @@
+/* ─────────────────────────────────────────────────────────────
+   York Alumni Theme — Local Fonts
+   Loaded via wp_enqueue_style before style.css
+   font-display: swap ensures text is visible while fonts load.
+───────────────────────────────────────────────────────────── */
+
+@font-face {
+	font-family: "Graphik";
+	src: url("../fonts/Graphik-Regular-Web.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Graphik";
+	src: url("../fonts/Graphik-Semibold-Web.woff2") format("woff2");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "York Grot";
+	src: url("../fonts/YorkGrot-SemiBoldCondensed.woff2") format("woff2");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}

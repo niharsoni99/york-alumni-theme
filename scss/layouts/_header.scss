@@ -1,0 +1,118 @@
+// ─────────────────────────────────────────────────────────────
+// scss/layouts/_header.scss
+// Sticky site header + nav + hamburger.
+// ─────────────────────────────────────────────────────────────
+
+.site-header {
+  background: $color-white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  gap: 24px;
+}
+
+// Primary nav
+.main-navigation ul {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+
+  li { position: relative; }
+
+  li a {
+    display: block;
+    padding: 8px 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+
+    &:hover,
+    .current-menu-item > & { color: $color-blue; background: rgba($color-blue, 0.07); }
+  }
+
+  // Dropdown
+  li ul {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    background: $color-white;
+    min-width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    padding: 8px;
+    flex-direction: column;
+    z-index: 999;
+  }
+
+  li:hover > ul,
+  li:focus-within > ul { display: flex; }
+}
+
+// Mobile hamburger
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  border-radius: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: $color-black;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  &.is-active {
+    span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    span:nth-child(2) { opacity: 0; }
+    span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  }
+}
+
+@include respond-to('tablet') {
+  .nav-toggle { display: flex; }
+
+  .main-navigation {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background: $color-white;
+    padding: 16px clamp(24px, calc(36 / 1440 * 100vw), 36px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    flex-direction: column;
+
+    &.is-open { display: flex; }
+
+    ul {
+      flex-direction: column;
+      width: 100%;
+
+      li ul {
+        position: static;
+        box-shadow: none;
+        display: flex;
+        background: $color-grey-bg;
+        border-radius: 8px;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  .header-cta-group { display: none; }
+}
