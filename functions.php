@@ -29,6 +29,10 @@ $york_includes = array(
 	'/inc/meta-boxes.php',       // Home page + Event meta boxes
 	'/inc/template-functions.php', // Helper functions used in templates
 	'/inc/performance.php',      // Remove unused WP scripts/styles
+	'/inc/post-type.php',
+	'/inc/usp-meta-box.php',
+
+	
 );
 
 foreach ( $york_includes as $file ) {
